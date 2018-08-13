@@ -35,6 +35,7 @@ A self provisioning Vagrant box based on Ubuntu 16.04 (ubuntu/xenial64).  No cus
 * Redis
 * Memcached
 * Gulp
+* Yarn
 * Bower
 * Sass
 * Mailhog
