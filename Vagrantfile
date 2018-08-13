@@ -122,13 +122,10 @@ apt-get -y install nodejs > /dev/null 2>&1
 apt-get -y install npm > /dev/null 2>&1
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 
-echo -e "\n--- Installing Sass ---"
-npm install -g sass > /dev/null 2>&1
+echo -e "\n--- Installing Sass, Gulp, Bower, and Yarn ---"
+npm install -g sass gulp bower yarn > /dev/null 2>&1
 
-echo -e "\n--- Installing Gulp, Bower, and Yarn ---"
-npm install -g gulp bower yarn > /dev/null 2>&1
-
-echo -e "\n--- Installing wp-cli ---"
+echo -e "\n--- Installing WP CLI ---"
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar > /dev/null 2>&1
 chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
