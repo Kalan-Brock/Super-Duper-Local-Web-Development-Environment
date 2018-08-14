@@ -8,7 +8,7 @@ A self provisioning Vagrant box based on Ubuntu 16.04 (ubuntu/xenial64).  No cus
 * Composer
 * Node JS
 * NPM
-* MySQL (MariaDB 10.1)
+* MySQL (MariaDB 10.3)
 * Mongo DB
 * Redis
 * Memcached
@@ -22,9 +22,9 @@ A self provisioning Vagrant box based on Ubuntu 16.04 (ubuntu/xenial64).  No cus
 * Vim
 * Curl
 
-## Connect to MySQL (MariaDB 10.1)
+## Connect to MySQL (MariaDB 10.3)
 
-No need for an SSH tunnel.  MySQL (MariaDB 10.1) is configured automatically to allow external connections.
+No need for an SSH tunnel.  MySQL (MariaDB 10.3) is configured automatically to allow external connections.
 
 Host: 192.168.33.10 (User: root  Password: root)
 

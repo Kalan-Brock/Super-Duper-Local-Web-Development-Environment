@@ -14,10 +14,15 @@ apt-get -y install vim curl build-essential python-software-properties git > /de
 
 echo -e "\n--- Adding repositories to update our box ---"
 add-apt-repository ppa:ondrej/php > /dev/null 2>&1
+
+#mongodb repo
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6 > /dev/null 2>&1
 echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list > /dev/null 2>&1
+
+#mariadb repo
 sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8 > /dev/null 2>&1
-add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://www.ftp.saix.net/DB/mariadb/repo/10.1/ubuntu xenial main' > /dev/null 2>&1
+sudo add-apt-repository "deb [arch=amd64,arm64,i386,ppc64el] http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.3/ubuntu xenial main"  > /dev/null 2>&1
+
 apt-get -qq update
 
 echo -e "\n--- Installing Apache and PHP  ---"
@@ -105,8 +110,8 @@ sed -i "s/-m 64/-m 1024/g" /etc/memcached.conf
 service memcached restart
 
 echo -e "\n--- Installing MariaDB ---"
-debconf-set-selections <<< 'mariadb-server-10.0 mysql-server/root_password password root'
-debconf-set-selections <<< 'mariadb-server-10.0 mysql-server/root_password_again password root'
+debconf-set-selections <<< 'mariadb-server-10.3 mysql-server/root_password password root'
+debconf-set-selections <<< 'mariadb-server-10.3 mysql-server/root_password_again password root'
 apt-get install -y mariadb-server mariadb-client  > /dev/null 2>&1
 mysql -uroot -proot -e "GRANT ALL PRIVILEGES ON * . * TO 'root'@'localhost' IDENTIFIED by 'root'" > /dev/null 2>&1
 mysql -uroot -proot -e "CREATE USER 'root'@'%' IDENTIFIED BY 'root'" > /dev/null 2>&1
