@@ -8,7 +8,7 @@ A self provisioning Vagrant box based on Ubuntu 16.04 (ubuntu/xenial64).  No cus
 * Composer
 * Node JS
 * NPM
-* MariaDB 10.1
+* MySQL (MariaDB 10.1)
 * Mongo DB
 * Redis
 * Memcached
