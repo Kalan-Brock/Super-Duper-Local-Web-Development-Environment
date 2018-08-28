@@ -1,6 +1,6 @@
 # Super Duper Local Web Development Environment
 
-A self provisioning Vagrant box based on Ubuntu 16.04 (ubuntu/xenial64).  No custom boxes, just a ready to go local web development environment you can customize to your heart's content.
+A self provisioning [Vagrant](https://www.vagrantup.com/ "Learn More About Vagrant") box based on Ubuntu 16.04 (ubuntu/xenial64).  No custom boxes, just a ready to go local web development environment you can customize to your heart's content.
 
 ## Ready to Go
 
