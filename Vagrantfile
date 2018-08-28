@@ -146,7 +146,7 @@ echo "bind 0.0.0.0" >> /etc/redis/redis.conf
 sudo update-rc.d redis-server defaults > /dev/null 2>&1
 sudo /etc/init.d/redis-server start > /dev/null 2>&1
 
-echo -e "\n--- Installing Mailhog ---"
+echo -e "\n--- Installing MailHog ---"
 wget --quiet -O /home/vagrant/mailhog https://github.com/mailhog/MailHog/releases/download/v1.0.0/MailHog_linux_amd64
 chmod +x /home/vagrant/mailhog
 touch /etc/systemd/system/mailhog.service
@@ -209,7 +209,7 @@ Https:      | https://192.168.33.10
 MySQL:      | Port: 3306  User: root  Password: root (SSH not needed)
 Redis:      | Port: 6379
 MongoDB:    | Port: 27017
-Mailhog:    | http://192.168.33.10:8025
+MailHog:    | http://192.168.33.10:8025
 
 EOF' >> /etc/update-motd.d/99-custom-header
 sudo chmod +x /etc/update-motd.d/99-custom-header

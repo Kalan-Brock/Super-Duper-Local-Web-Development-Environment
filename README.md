@@ -19,7 +19,7 @@ At your first ```vagrant up```, the following is automatically installed AND con
 * Yarn
 * Bower
 * Sass
-* Mailhog
+* MailHog
 * WP-CLI
 * Git
 * Vim
@@ -40,6 +40,10 @@ Alternatively, you can set your hosts file to point any domain you want to this 
 No need for an SSH tunnel.  MySQL (MariaDB 10.3) is configured automatically to allow external connections.
 
 Host: 192.168.33.10 (User: root  Password: root)
+
+## MailHog Interface
+
+If you're developing emails, you can visit the [MailHog](https://github.com/mailhog/MailHog "Learn More About MailHog") interface at http://192.168.33.10:8025.
 
 ## Want Something Different?
 
