@@ -98,7 +98,7 @@ echo '<IfModule mod_ssl.c>
           </VirtualHost>
       </IfModule>' > /etc/apache2/sites-available/default-ssl.conf
 
-a2enmod ssl > /dev/null 2>&1
+a2enmod rewrite > /dev/null 2>&1
 a2enmod headers > /dev/null 2>&1
 a2ensite default-ssl > /dev/null 2>&1
 sed -i "s/www-data/vagrant/" /etc/apache2/envvars
@@ -116,6 +116,7 @@ apt-get install -y mariadb-server mariadb-client  > /dev/null 2>&1
 mysql -uroot -proot -e "GRANT ALL PRIVILEGES ON * . * TO 'root'@'localhost' IDENTIFIED by 'root'" > /dev/null 2>&1
 mysql -uroot -proot -e "CREATE USER 'root'@'%' IDENTIFIED BY 'root'" > /dev/null 2>&1
 mysql -uroot -proot -e "GRANT ALL PRIVILEGES ON * . * to 'root'@'%' identified by 'root'" > /dev/null 2>&1
+mysql -uroot -proot -e "GRANT GRANT OPTION ON * . * to 'root'@'%'" > /dev/null 2>&1
 mysql -uroot -proot -e "FLUSH PRIVILEGES" > /dev/null 2>&1
 sed -i 's/^bind-address/#bind-address/' /etc/mysql/my.cnf > /dev/null 2>&1
 sed -i 's/^skip-external-locking/#skip-external-locking/' /etc/mysql/my.cnf > /dev/null 2>&1
