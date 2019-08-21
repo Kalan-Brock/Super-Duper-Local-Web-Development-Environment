@@ -4,7 +4,7 @@ A self provisioning [Vagrant](https://www.vagrantup.com/ "Learn More About Vagra
 
 ## Ready to Go
 
-At your first ```vagrant up```, the following is automatically installed AND configured.
+At your first ```vagrant up```, the following is automatically installed and configured.
 
 * Apache (http and https)
 * PHP 7.2
